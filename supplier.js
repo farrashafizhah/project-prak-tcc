@@ -21,7 +21,7 @@ function kirim() {
   if (supplierID == "") {
     // Tambah catatan
     axios
-      .post("https://mahasiswa-llz4uecrhq-et.a.run.app/mahasiswa", {
+      .post("https://supplier-nt2sa25qfq-et.a.run.app/supplier", {
         supplier,
         info,
       })
@@ -37,7 +37,7 @@ function kirim() {
       .catch((error) => console.log(error.message));
   } else {
     axios
-      .put(`https://mahasiswa-llz4uecrhq-et.a.run.app/mahasiswa/${supplierID}`, {
+      .put(`https://supplier-nt2sa25qfq-et.a.run.app/supplier/${supplierID}`, {
         supplier,
         info,
       })
@@ -57,7 +57,7 @@ function kirim() {
 // Ngambil catatan
 function getCatatan() {
   axios
-    .get("https://mahasiswa-llz4uecrhq-et.a.run.app/mahasiswa")
+    .get("https://supplier-nt2sa25qfq-et.a.run.app/supplier")
     .then(({ data }) => {
       const table = document.querySelector("#table-mhs");
       const { data: supplier } = data;
@@ -97,7 +97,7 @@ function hapusCatatan() {
     btn.addEventListener("click", () => {
       const supplierID = btn.dataset.supplierID;
       axios
-        .delete(`https://mahasiswa-llz4uecrhq-et.a.run.app/mahasiswa/${supplierID}`)
+        .delete(`https://supplier-nt2sa25qfq-et.a.run.app/supplier/${supplierID}`)
         .then(() => getCatatan())
         .catch((error) => console.log(error));
     });
