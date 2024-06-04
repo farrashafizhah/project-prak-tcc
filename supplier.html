@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Supplier</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a href="index.html">Kembali</a>
+    <h1>Data Supplier</h1>
+    <form>
+      <span>
+        <label for="supplier">Supplier</label>
+        <input
+          data-id
+          id="supplier"
+          type="text"
+          placeholder="Masukkan supplier"
+          required
+        />
+      </span>
+      <span style="margin-left: 1rem">
+        <label for="info">Info</label>
+        <input
+          data-id
+          id="info"
+          type="text"
+          placeholder="Masukkan info/link"
+          required
+        />
+      </span>
+      <button type="submit">Simpan</button>
+    </form>
+    <main style="margin-top: 1rem">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Supplier</th>
+            <th>Info</th>
+            <th colspan="2">Option</th>
+          </tr>
+        </thead>
+        <tbody id="table-mhs"></tbody>
+      </table>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="supplier.js"></script>
+  </body>
+</html>

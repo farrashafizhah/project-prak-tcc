@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iphone</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a href="index.html">Kembali</a>
+    <h1>Iphone</h1>
+    <form>
+      <span>
+        <label for="device">Device</label>
+        <input
+          data-id
+          id="device"
+          type="text"
+          placeholder="Masukkan nama device"
+          required
+        />
+      </span>
+      <span style="margin-left: 1rem">
+        <label for="harga">Harga</label>
+        <input
+          data-id
+          id="harga"
+          type="text"
+          placeholder="Masukkan harga"
+          required
+        />
+      </span>
+      <button type="submit">Simpan</button>
+    </form>
+    <main style="margin-top: 1rem">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Device</th>
+            <th>Harga</th>
+            <th colspan="2">Option</th>
+          </tr>
+        </thead>
+        <tbody id="table-dosen"></tbody>
+      </table>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="iphone.js"></script>
+  </body>
+</html>
