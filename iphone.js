@@ -4,7 +4,7 @@ const router = express.Router();
 const connection = require("./config");
 
 // [GET] Mengambil daftar iphone
-router.get("/iphone", async (req, res) => {
+router.get("/", async (req, res) => {
   try {
     // Execute query ke database
     const command = "SELECT * FROM iphone";
@@ -26,7 +26,7 @@ router.get("/iphone", async (req, res) => {
 });
 
 // [POST] Memasukkan iphone baru ke daftar iphone
-router.post("/iphone", async (req, res) => {
+router.post("/", async (req, res) => {
   try {
     // mengambil device dan harga dari request body
     const { device, harga } = req.body;
