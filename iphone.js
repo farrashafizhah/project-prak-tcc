@@ -123,7 +123,7 @@ function editCatatan() {
       const elemen_device = document.querySelector("#device");
       const elemen_harga = document.querySelector("#harga");
 
-      elemen_device.dataset.deviceID = deviceID;
+      elemen_device.dataset.deviceID = deviceID; // Menyimpan deviceID pada elemen input
       elemen_device.value = device;
       elemen_harga.value = harga;
     });
