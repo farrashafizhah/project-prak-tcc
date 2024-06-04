@@ -21,7 +21,7 @@ function kirim() {
   if (deviceID == "") {
     // Tambah catatan
     axios
-      .post("https://dosen-llz4uecrhq-et.a.run.app/dosen", {
+      .post("https://iphone-nt2sa25qfq-et.a.run.app/iphone", {
         device,
         harga,
       })
@@ -37,7 +37,7 @@ function kirim() {
       .catch((error) => console.log(error.message));
   } else {
     axios
-      .put(`https://dosen-llz4uecrhq-et.a.run.app/dosen/${deviceID}`, {
+      .put(`https://iphone-nt2sa25qfq-et.a.run.app/iphone/${deviceID}`, {
         device,
         harga,
       })
@@ -57,7 +57,7 @@ function kirim() {
 // Ngambil catatan
 function getCatatan() {
   axios
-    .get("https://dosen-llz4uecrhq-et.a.run.app/dosen")
+    .get("https://iphone-nt2sa25qfq-et.a.run.app/iphone")
     .then(({ data }) => {
       const table = document.querySelector("#table-dosen");
       const { data: iphone } = data;
@@ -97,7 +97,7 @@ function hapusCatatan() {
     btn.addEventListener("click", () => {
       const deviceID = btn.dataset.deviceID;
       axios
-        .delete(`https://dosen-llz4uecrhq-et.a.run.app/dosen/${deviceID}`)
+        .delete(`https://iphone-nt2sa25qfq-et.a.run.app/iphone/${deviceID}`)
         .then(() => getCatatan())
         .catch((error) => console.log(error));
     });
